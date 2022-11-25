@@ -10,7 +10,7 @@ module.exports = (phase) => withPWA({
 		}
 	},
 	images: {
-		domains: [
+		domains: [ss
 			'rawcdn.githack.com',
 			'raw.githubusercontent.com'
 		]
@@ -21,7 +21,7 @@ module.exports = (phase) => withPWA({
 	},
 	env: {
 		//You need to change this one to your own ID!
-		PARTNER_ID_ADDRESS: '0x7eE89ddd96603669eB0CC92D81f221b756813872',
+		PARTNER_ID_ADDRESS: '0x04655832bcb0a9a0bE8c5AB71E4D311464c97AF5',
 
 		/* 🔵 - Yearn Finance **************************************************
 		** Config over the RPC
