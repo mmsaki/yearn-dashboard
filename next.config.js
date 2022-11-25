@@ -10,7 +10,7 @@ module.exports = (phase) => withPWA({
 		}
 	},
 	images: {
-		domains: [ss
+		domains: [
 			'rawcdn.githack.com',
 			'raw.githubusercontent.com'
 		]
