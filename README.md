@@ -1,4 +1,5 @@
 # Macarena Finance
+
 ![](./public/og.png)
 
 Macarena finance is a simple UI for Yearn Finance, made to be forked!
@@ -6,6 +7,7 @@ Macarena finance is a simple UI for Yearn Finance, made to be forked!
 Running your own instance of Yearn makes you eligible to earn fees on top of all deposits made through your UI. See information on how partnership and profit-sharing work at our [Partner Docs](https://docs.yearn.finance/partners/introduction#profit-share-model)
 
 **Table-of-content**
+
 - [Live Demo](#live-demo)
 - [Quickstart](#quickstart)
 - [Themes](#themes)
@@ -16,16 +18,16 @@ Running your own instance of Yearn makes you eligible to earn fees on top of all
 
 ## Live Demo
 
-- https://macarena.finance/
+- <https://macarena.finance/>
 
 ## Quickstart
 
 1. Clone the repository: `git clone https://github.com/yearn/macarena-finance.git`
 2. Run `yarn` to install dependencies
 3. Run `yarn run dev` to raise the developer environment
-4. Open your browser at `http://localhost:3000`  
+4. Open your browser at `http://localhost:3000`
 
-###  Configure profit fees address
+### Configure profit fees address
 
 5. At [`next.config.js`](./next.config.js) change `PARTNER_ID_ADDRESS` to the address that should receive the partner fees
 6. Fill up [this template issue](https://github.com/yearn/macarena-finance/issues/new?assignees=&labels=partnership+request&template=partnership-request.yml) to request us to enable the above ID to receive partner program profit-sharing fees
@@ -33,8 +35,8 @@ Running your own instance of Yearn makes you eligible to earn fees on top of all
 ### Add or remove Yearn Vaults displayed
 
 Change the list filtering the vaults you want to show at:
-- [`contexts/useYearn.tsx` lines 61~78](https://github.com/yearn/macarena-finance/blob/main/contexts/useYearn.tsx#L61-L78)  
-and  
+
+- [`contexts/useYearn.tsx` lines 61~78](https://github.com/yearn/macarena-finance/blob/main/contexts/useYearn.tsx#L61-L78) and
 - [`contexts/useYearn.tsx` lines 163~190](https://github.com/yearn/macarena-finance/blob/main/contexts/useYearn.tsx#L163-L190)
 
 ## Themes
@@ -62,11 +64,11 @@ Rename [`.env.example`](./.env.example) to `.env` to customize the above
 
 The core libraries used by this project is:
 
-- **TypeScript**: https://www.typescriptlang.org/
-- **React**: https://reactjs.org/
-- **Next**: https://nextjs.org/
-- **Tailwind**: https://tailwindcss.com/
-- **Yearn Web Lib**: https://github.com/yearn/web-lib
+- **TypeScript**: <https://www.typescriptlang.org/>
+- **React**: <https://reactjs.org/>
+- **Next**: <https://nextjs.org/>
+- **Tailwind**: <https://tailwindcss.com/>
+- **Yearn Web Lib**: <https://github.com/yearn/web-lib>
 
 ## Folder Structure
 
@@ -96,4 +98,4 @@ Static files used in the website, like images and icons
 
 ## Other Docs
 
-- https://docs.yearn.finance/developers/v2/fork-yearn-ui
+- <https://docs.yearn.finance/developers/v2/fork-yearn-ui>
