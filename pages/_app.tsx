@@ -8,8 +8,14 @@ import	{KBarProvider, Action, createAction, useRegisterActions}	from	'kbar';
 import	{useWeb3, WithYearn}										from	'@yearn-finance/web-lib/contexts';
 import	{Dropdown}													from	'@yearn-finance/web-lib/components';
 import	{truncateHex}												from	'@yearn-finance/web-lib/utils';
-import	{NetworkEthereum, NetworkFantom, SocialDiscord,
-	SocialGithub, SocialTwitter}									from	'@yearn-finance/web-lib/icons';
+import {
+	NetworkEthereum,
+	NetworkFantom,
+	// NetworkGoerli,
+	SocialDiscord,
+	SocialGithub,
+	SocialTwitter
+} from '@yearn-finance/web-lib/icons';
 import	useYearn, {YearnContextApp}									from	'contexts/useYearn';
 import	Meta														from	'components/Meta';
 import	KBar														from	'components/Kbar';
@@ -31,8 +37,10 @@ type TDropdownOption = {
 	label: string;
 };
 function	Header(): ReactElement {
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const	options: TDropdownOption[] = [
 		{icon: <NetworkEthereum />, label: 'Ethereum', value: 1},
+		// {icon: <NetworkGoerli />, label: 'Fantom', value: 5},
 		{icon: <NetworkFantom />, label: 'Fantom', value: 250}
 	];
 
@@ -55,7 +63,7 @@ function	Header(): ReactElement {
 	React.useEffect((): void => {
 		const	_selectedOption = options.find((e): boolean => e.value === Number(chainID)) || options[0];
 		set_selectedOption(_selectedOption);
-	}, [chainID, isActive]);
+	}, [chainID, isActive, options]);
 
 	return (
 		<header className={'macarena--header static inset-x-0 top-0 mb-5 flex h-24 w-full flex-row bg-neutral-0'}>
@@ -173,7 +181,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 		keywords: 'github code',
 		section: 'Social',
 		icon: <SocialGithub className={'h-9 w-9'} />,
-		perform: async (): Promise<unknown> => window.open('https://github.com/yearn', '_blank')
+		perform: async (): Promise<unknown> => window.open('https://github.com/mmsaki', '_blank')
 	},
 	{
 		id: 'twitterAction',
@@ -182,7 +190,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 		keywords: 'social contact dm',
 		section: 'Social',
 		icon: <SocialTwitter className={'h-9 w-9'} />,
-		perform: async (): Promise<unknown> => window.open('https://twitter.com/iearnfinance', '_blank')
+		perform: async (): Promise<unknown> => window.open('https://twitter.com/msakiart', '_blank')
 	},
 	{
 		id: 'discordAction',
